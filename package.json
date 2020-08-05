@@ -10,7 +10,8 @@
     "easy-soap-request": "^3.3.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "reactstrap": "^8.5.1"
   },
   "scripts": {
     "start": "react-scripts start",
