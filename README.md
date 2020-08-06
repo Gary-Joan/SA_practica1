@@ -1,6 +1,15 @@
+## Rquerimientos de la aplicacion
+-node js v12.14.1
+-visual code en su ultima version.
+-prettier Code formatter. 5.1.3--> extension de visual code para codigo formateado
+
+
+
 ## Scripts que se pueden ejecutar y los comandos
 
-Dentro de la projecto se pueden ejecutar los siguientes comando
+Dentro de la projecto se pueden ejecutar los siguientes comandos
+<br />
+Dentro de su consolo de comando ejecutar lo siguiente dependiendo de lo que se quiere hacer.
 
 ### `npm start`
 
