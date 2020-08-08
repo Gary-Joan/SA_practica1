@@ -19,6 +19,7 @@ class Inicio extends Component {
     this.setState({ nombre: event.target.value });// aqui manejamos el seteo del state para el valor del contacto
   };
 //La funcion publish sirve para enviar el contacto hacia la api en forma de JSON
+//Aqui pondriamos las credenciales para poder consumir el recurso y obtener la llave
   publish() {
     axios({
       method: "post",
