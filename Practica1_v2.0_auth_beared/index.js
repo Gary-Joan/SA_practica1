@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const api=require('./api.js');
 //especificamos el subdirectorio donde se encuentran las páginas estáticas
 app.use(express.static(__dirname+'/public'));
+app.set('views', __dirname + '/views'); // general config
+app.set('view engine', 'ejs');
 
 
 //extended: false significa que parsea solo string (no archivos de imagenes por ejemplo)
@@ -19,5 +21,5 @@ app.use(api);
 
 
 app.listen(8080,function(){
-    console.log(" esta vivo en el puerto 10000 puto el que lo lea");
+    console.log("Servidor corriendo puerto 8080 servicio encendido....");
 });
