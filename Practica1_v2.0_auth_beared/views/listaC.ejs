@@ -1,8 +1,8 @@
 <html>
   <body>
     <h1>Lista Contactos
-    <% students.studentList.forEach(function(contacto){ %>
-      <p><%= contacto %></p>
+    <% students.forEach(function(contacto){ %>
+      <h4><%= contacto.name %></h4>
       <% }) %>
   </body>
 </html>

@@ -2,11 +2,13 @@ const express = require("express");
 const router = express.Router();
 const axios = require("axios");
 const qs = require("querystring");
-
+//inicio del programa pagina index.html
 router.get("/", async (req, res) => {
   res.send("index.html");
 });
 let token = {};
+
+//Funcion que nos devuelve  el access._token para poder ser utuliizado despues en las authenticaciones necesarias
 async function getauth() {
   var access_token = "";
   const data = qs.stringify({
@@ -35,6 +37,7 @@ async function getauth() {
       console.log("ERROR: ====", err);
     });
 }
+//Aqui se ejecuta la insercion del contactocon sus respectivas credenciales de tipo Bearer
 router.post("/set_contac", async (req, res) => {
   var name = req.body.contac;
   var tokenAuth = await getauth();
@@ -64,9 +67,32 @@ router.post("/set_contac", async (req, res) => {
 
   res.send("Si lo mando");
 });
-router.get('/listac', function(req, res, next) {
-  
-  var data = {studentList: ["Johnson", "Mary", "Peter", "Chin-su"]};
-  res.render('listaC', {students: data});
-})
+//funcion que nos devuelve los contacto de la base de datos
+async function getContactos() {
+  var tokenAuth = await getauth();
+  const options = {
+    headers: {
+      Authorization: "Bearer " + tokenAuth,
+    },
+  };
+  return await axios
+    .get(
+      `https://api.softwareavanzado.world/index.php?option=com_contact&webserviceVersion=1.0.0&webserviceClient=administrator&filter[search]=200915609&api=hal`,
+      options
+    )
+    .then((res) => {
+      const persons = res.data._embedded.item;
+
+      return persons;
+      //aqui capturamos la lista de contactos y lo ponemos en el state del constructor
+    })
+    .catch((err) => {
+      console.log("ERROR: ====", err);
+    });
+}
+//aqui mostramos la lista de contactos en una nueva pagina
+router.get("/listac", async function (req, res) {
+  var contactos = await getContactos();
+  res.render("listaC", { students: contactos });
+});
 module.exports = router;
