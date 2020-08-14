@@ -1,29 +1,25 @@
 ## Rquerimientos de la aplicacion
+
 -node js v12.14.1
+</br>
 -visual code en su ultima version.
+</br>
 -prettier Code formatter. 5.1.3--> extension de visual code para codigo formateado
 
+## PRACTICA 2
 
-
-## Scripts que se pueden ejecutar y los comandos
-
-Dentro de la projecto se pueden ejecutar los siguientes comandos
+Dentro de la Rama se ecnuetra dos carpetas con los contenidos de la practica 2
 <br />
-Dentro de su consolo de comando ejecutar lo siguiente dependiendo de lo que se quiere hacer.
 
-### `npm start`
+### `PRACTICA 2 PARTE 1 "`
 
-Este comando ejecuta el proyecto en el entorno de desarrollo.<br />
-Abrir [http://localhost:3000](http://localhost:3000) para verlo en el navegador.
-
-Cada vez que se ejecuten cambios la pagina se refrescara.<br />
-
-### `npm test`
-
-Se usa para correr pruebas a la aplicacion.<br />
-
-### `npm run build`
-
-Esto sirve para poder construir la aplicacion para ambiente de despligue.<br />
+AUTORIZACION CON BEAER TOKEN
 <br />
-Y listo si programa ya se puede ejecutar!!.
+Abrir [https://github.com/Gary-Joan/SA_practica1/tree/feature/Practica2_SA/Practica1_v2.0_auth_beared](https://github.com/Gary-Joan/SA_practica1/tree/feature/Practica2_SA/Practica1_v2.0_auth_beared) para ver los archivos.
+
+<br />
+
+### `PRACTICA 2 PARTE 2`
+
+AUTORIZACION BASIC CON SERVICIO SOAP
+Abrir [https://github.com/Gary-Joan/SA_practica1/tree/feature/Practica2_SA/Practica2_auth_basic](https://github.com/Gary-Joan/SA_practica1/tree/feature/Practica2_SA/Practica2_auth_basic) para verlo en el navegador.
